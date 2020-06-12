@@ -136,7 +136,7 @@ const App = (props) => {
     <div>
     <div className="read-books-conatiner">
         <ul>
-          {book
+          {book ? book.length > 0
             ? book.map((book) => {
               return (
                 <li key={book._id} className="read-books-list-div">
@@ -155,7 +155,7 @@ const App = (props) => {
                 </li>
               )
             })
-            : 'LOADING...'}
+            : 'LOADING...' : "LOADING..."}
         </ul>
       </div>
     </div>
