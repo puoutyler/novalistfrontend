@@ -34,7 +34,7 @@ const App = (props) => {
   //   GET BOOKS METHOD
   /////////////////////////-*
   const getBooks = async () => {
-    const response = await fetch ('http://novalist.herokuapp.com/novalist')
+    const response = await fetch ('https://novalist.herokuapp.com/novalist')
     const result = await response.json()
     console.log('Books I Want To Read: ', result)
     setBook(result)
@@ -61,7 +61,7 @@ const App = (props) => {
   //    HANDLE CREATE
   /////////////////////////-*
   const handleCreate = async (data) => {
-    const response = await fetch('http://novalist.herokuapp.com/novalist' , {
+    const response = await fetch('https://novalist.herokuapp.com/novalist' , {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -76,7 +76,7 @@ const App = (props) => {
   //    HANDLE EDIT
   /////////////////////////-*
   const handleEdit = async (data) => {
-    const response = await fetch(`http://novalist.herokuapp.com/novalist/${data._id}`, {
+    const response = await fetch(`https://novalist.herokuapp.com/novalist/${data._id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -91,7 +91,7 @@ const App = (props) => {
   //    HANDLE DELETE
   /////////////////////////-*
   const handleDelete = async (id) => {
-    const response = await fetch(`http://novalist.herokuapp.com/novalist/${id}`, {
+    const response = await fetch(`https://novalist.herokuapp.com/novalist/${id}`, {
       method: 'DELETE',
     })
     console.log(response)
