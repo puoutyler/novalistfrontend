@@ -52,7 +52,7 @@ const App = (props) => {
   //    NEW BOOKS ARRAY
   /////////////////////////-*
   const newBooks = (async () => {
-      const response = await axios.get('https://www.googleapis.com/books/v1/volumes?q=programming&orderBy=newest&key=AIzaSyAQNLb6ohAjiKiv_PIijuizvpZ1gOdSYz4&maxResults=6')
+      const response = await axios.get('https://www.googleapis.com/books/v1/volumes?q=coding&orderBy=newest&key=AIzaSyAQNLb6ohAjiKiv_PIijuizvpZ1gOdSYz4&maxResults=6')
       console.log('New Books From API: ', response)
       setAPIBooks(response.data.items)
   })
