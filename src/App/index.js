@@ -113,7 +113,7 @@ const App = (props) => {
     <div className="Api_container">
       <div>
       <ul className="App_row">
-        {apiBooks.map((newBook, index) => {
+        {apiBooks ? apiBooks.map((newBook, index) => {
           return (
                   <li key={index} className="API-li">
                     {/* <h1 className="card-title">{newBook.volumeInfo.title}</h1> */}
@@ -123,6 +123,7 @@ const App = (props) => {
                 )
               } 
             ) 
+            : 'Loading...'
           } 
       </ul>
       </div>
