@@ -113,7 +113,7 @@ const App = (props) => {
     <div className="Api_container">
       <div>
       <ul className="App_row">
-        {apiBooks ? apiBooks > 0 ? apiBooks.map((newBook, index) => {
+        {apiBooks ? apiBooks.length > 0 ? apiBooks.map((newBook, index) => {
           return (
                   <li key={index} className="API-li">
                     {/* <h1 className="card-title">{newBook.volumeInfo.title}</h1> */}
