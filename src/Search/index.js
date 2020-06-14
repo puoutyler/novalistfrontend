@@ -51,8 +51,7 @@ export default (props) => {
                     {results ? results.map((book, index) => {
                         return (
                             <li key={index} className="API-li">
-                                 <a target="_blank" href={book.volumeInfo.canonicalVolumeLink}><img className="book-image-center" alt="Google API Image" src={book.volumeInfo.imageLinks.smallThumbnail} className="card-image2"/></a>
-                                
+                                 <a target="_blank" href={book.volumeInfo.canonicalVolumeLink}><img alt="Google API Image" src={book.volumeInfo.imageLinks.smallThumbnail} className="card-image2"/></a>
                                 <p className="card-content">Author: {book.volumeInfo.title}</p>
                             </li>
                         )}) 
