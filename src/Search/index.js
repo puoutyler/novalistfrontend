@@ -46,7 +46,7 @@ export default (props) => {
             }}>
                 Search Books
             </button>
-            <div className="Api_container2">
+            <div className="Api_container">
                 <ul className="App_row">
                     {results ? results.map((book, index) => {
                         return (
