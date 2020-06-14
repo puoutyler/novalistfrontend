@@ -112,7 +112,7 @@ const App = (props) => {
   {/* GOOGLE API MAP BEGINS */}
     <div className="Api_container">
       <div>
-      <ul >
+      <ul className="Api_container" >
         {apiBooks ? apiBooks.length > 0 ? apiBooks.map((newBook, index) => {
           return (
                   <li key={index} className="API-li">
