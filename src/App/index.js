@@ -116,10 +116,10 @@ const App = (props) => {
         {apiBooks ? apiBooks.length > 0 ? apiBooks.map((newBook, index) => {
           return (
                   <li key={index} className="API-li">
-                    {/* <h1 className="card-title">{newBook.volumeInfo.title}</h1> */}
-                    <a target="_blank" href={newBook.volumeInfo.canonicalVolumeLink}>
+                    <h1 className="card-title">{newBook.volumeInfo.title}</h1>
+                    {/* <a target="_blank" href={newBook.volumeInfo.canonicalVolumeLink}>
                       <img alt="Google API Image" src={newBook.volumeInfo.imageLinks.smallThumbnail} className="card-image"/>
-                    </a>
+                    </a> */}
                     <p className="card-content">Author: {newBook.volumeInfo.authors[0]}</p>
                   </li>
                 )
