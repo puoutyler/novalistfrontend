@@ -116,7 +116,7 @@ const App = (props) => {
         {apiBooks ? apiBooks.length > 0 ? apiBooks.map((newBook, index) => {
           return (
                   <li key={index} className="API-li">
-                    <h1 className="card-title">{newBook.volumeInfo.title}</h1>
+                    {/* <h1 className="card-title">{newBook.volumeInfo.title}</h1> */}
                     <a target="_blank" href={newBook.volumeInfo.canonicalVolumeLink}>
                       <img alt="Google API Image" src={newBook.volumeInfo.imageLinks.smallThumbnail} className="card-image"/>
                     </a>
@@ -130,7 +130,7 @@ const App = (props) => {
       </ul>
       </div>
     </div>
-  {/* GOOGLE API MAP ENDS */}
+  {/* GOOGLE API MAP ENDS */} 
     <div className="search-container">
       <Search className="search"/>
     </div>
