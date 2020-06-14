@@ -30,7 +30,6 @@ export default (props) => {
     }
     return (
         <div className="search">
-
             <input 
                 type="text"
                 name="search"
