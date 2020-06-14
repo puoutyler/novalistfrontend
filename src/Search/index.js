@@ -4,12 +4,9 @@ import "../App/style.scss";
 
 export default (props) => {
     const [formData, setFormData] = React.useState(props.initial)
-
     const [book, setBook] = React.useState("")
     const [results, setResults] = React.useState("")
-
     const books = React.useState({})
-
     const [apiBooks, setAPIBooks] = React.useState([])
     const blank = {
         title: '', 
@@ -19,7 +16,6 @@ export default (props) => {
     React.useEffect(() =>{
         setFormData(props.initial);
     }, [props.initial]);
-
 
     const handleChange = (event) => {
         const book = event.target.value
@@ -42,19 +38,15 @@ export default (props) => {
                 onChange={handleChange}
                 className="search-input"
                 placeholder="Search Books"
-                >
-                
+                >  
             </input>
-
             <button className="search-button" onClick={() => {
                 onSubmit(book);
                 setFormData(props.initial);
             }}>
                 Search Books
             </button>
-
             <div className="Api_container2">
-            
                 <ul className="App_row">
                     {results ? results.map((book, index) => {
                         return (
@@ -66,9 +58,7 @@ export default (props) => {
                         )}) 
                     : ''} 
                 </ul>
-                
             </div>
-
         </div>
     )
 }
